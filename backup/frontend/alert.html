@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fall Detection Alerts</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h2>Fall Detection Alerts</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody id="alert-table"></tbody>
+  </table>
+
+  <script>
+  function loadAlerts() {
+    $.getJSON("../backend/db/select/fetch_alerts.php", function(data) {
+      let html = "";
+      for (let i = 0; i < data.length; i++) {
+        html += `<tr><td>${data[i].timestamp}</td><td>${data[i].message}</td></tr>`;
+      }
+      $("#alert-table").html(html);
+    });
+  }
+
+  setInterval(loadAlerts, 3000);
+  loadAlerts();
+    </script>
+
+</body>
+</html>

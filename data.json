@@ -1,0 +1,30 @@
+[
+    {
+        "timestamp": "2025-06-02 09:51:42",
+        "message": "Fall detected!"
+    },
+    {
+        "timestamp": "2025-06-02 09:53:43",
+        "message": "Fall detected!"
+    },
+    {
+        "timestamp": "2025-06-02 09:54:22",
+        "message": "Fall detected!"
+    },
+    {
+        "timestamp": "2025-06-02 10:00:35",
+        "message": "Fall detected!"
+    },
+    {
+        "timestamp": "2025-06-02 10:09:37",
+        "message": "Fall detected!"
+    },
+    {
+        "timestamp": "2025-06-02 10:10:47",
+        "message": "Fall detected!"
+    },
+    {
+        "timestamp": "2025-06-02 10:10:50",
+        "message": "Fall detected!"
+    }
+]
