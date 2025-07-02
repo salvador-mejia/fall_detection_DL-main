@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const AlertDashboard = () => {
-  const [alerts, setAlerts] = useState([]);
+  const [alerts, setAlerts] = useState([]); 
 
   useEffect(() => {
     fetch('http://localhost:5000/api/alerts')
