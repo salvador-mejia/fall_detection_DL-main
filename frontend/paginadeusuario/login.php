@@ -3,9 +3,19 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
 
+// Conexión a la base de datos fall_detection
+//$host = 'localhost';
+//$db = 'fall_detection';
+//$user = 'root';
+//$pass = 'Hola1234';
 
+//try {
+  //$pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
+    //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//} catch (PDOException $e) {
+  //  die("Error de conexión: " . $e->getMessage());
+//}
 
-// Procesamiento del formulario
 $error = '';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username_email = $_POST['username_email'] ?? '';
@@ -34,34 +44,60 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
-        <a href="../../paginaprincipal.php">
-            <img src="../../ASSETS/img/logo.svg" alt="Logo" width="200">
-        </a>
+        <div style="display: flex; align-items: center;">
+            <img src="../../ASSETS/img/logo.svg" alt="Logo" width="150">
+        </div>
+        <nav>
+            <a href="#">Información sobre el Sistema</a>
+            <a href="#">Soluciones y productos</a>
+            <a href="#">Videos y multimedia</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Contáctenos</a>
+            <a href="#">FAQs</a>
+            <div style="flex-grow: 1;"></div> <!-- Espacio flexible para alinear a la izquierda -->
+            <form style="display: inline;">
+                <input type="text" placeholder="Busque en AlertaVital" style="padding: 5px;">
+                <button type="submit" style="background-color: #f5a623; border: none; color: white; padding: 5px 10px;">BUSCAR</button>
+            </form>
+        </nav>
     </header>
 
+    <!-- Contenido principal -->
     <main>
-        <h2 class="subtitulo">Accede a tu cuenta</h2>
+        <div style="display: flex; gap: 40px; align-items: center; justify-content: center; padding: 40px;">
+            <div>
+                <img src="../../ASSETS/img/ancianos.png" alt="Imagen ilustrativa" style="border-radius: 10px; max-width: 400px;">
+            </div>
 
-        <?php if (!empty($error)) : ?>
-            <p style="color: red; text-align:center;"><?php echo htmlspecialchars($error); ?></p>
-        <?php endif; ?>
+            <div class="tab-container">
+                <div class="button-group">
+                    <button class="tab-button">Login</button>
+                    <button class="tab-button">Registro</button>
+                </div>
+                <h2 class="subtitulo">Accede a tu cuenta</h2>
 
-        <div class="tab-container">
-            <form method="POST" action="">
-                <label for="username-email">Nombre de Usuario o Correo Electrónico:</label>
-                <input type="text" id="username-email" name="username_email" placeholder="Ingresa tu usuario o correo" required>
+                <?php if (!empty($error)) : ?>
+                    <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
+                <?php endif; ?>
 
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                <form method="POST" action="">
+                    <label for="username-email">Nombre de Usuario o Correo Electrónico:</label>
+                    <input type="text" id="username-email" name="username_email" placeholder="Ingresa tu usuario o correo" required>
 
-                <button type="submit">Iniciar Sesión</button>
-            </form>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
         </div>
     </main>
 
+    <!-- Pie de página -->
     <footer>
-        <p>&copy; FALL DETECTION 2025</p>
+        <p>© FALL DETECTION 2025</p>
     </footer>
 </body>
 </html>

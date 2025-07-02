@@ -1,132 +1,131 @@
-/* Estilos generales */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #000;
-}
-
-/* Header */
-header {
-    padding: 10px 20px;
-    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0973b9;
 }
 
-header img {
-    max-height: 60px;
-}
-
-/* Navegación superior */
 nav {
     display: flex;
-    justify-content: center;
-    margin: 10px 0;
+    align-items: center;
 }
 
 nav a {
+    color: #0973b9;
     text-decoration: none;
-    color: #0073e6;
     margin: 0 15px;
-    font-weight: bold;
+    font-size: 16px;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Contenido principal */
+nav form {
+    display: flex;
+    align-items: center;
+}
+
+nav form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+nav form button {
+    background-color: #e68d1d;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    gap: 50px;
+    padding: 20px;
 }
 
-main img {
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-/* Contenedor de login */
 .tab-container {
-    background-color: #0073e6;
-    padding: 30px;
-    border-radius: 20px;
-    width: 350px;
+    background-color: #0973b9;
+    padding: 20px;
+    border-radius: 10px;
     color: white;
+    width: 300px;
 }
 
-.tab-buttons {
+.button-group {
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.tab-link {
-    background-color: #f7981d;
+.tab-button {
+    background-color: #e68d1d;
     border: none;
-    padding: 10px 20px;
-    font-weight: bold;
     color: white;
-    cursor: pointer;
+    padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-.tab-link.active {
-    background-color: #e17700;
+.tab-button:hover {
+    background-color: #c57717;
 }
 
-.tab-content {
-    display: none;
+.tab-container h2 {
+    margin-top: 0;
+    font-size: 20px;
 }
 
-.tab-content.active {
+.tab-container label {
     display: block;
-}
-
-/* Formulario */
-form label {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin: 10px 0 5px;
     font-weight: bold;
 }
 
-form input {
+.tab-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.tab-container button[type="submit"] {
     width: 100%;
     padding: 10px;
+    background-color: #e68d1d;
     border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #f7981d;
+    border-radius: 4px;
     color: white;
     font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #e17700;
+.tab-container button[type="submit"]:hover {
+    background-color: #c57717;
 }
 
-/* Footer */
 footer {
-    background-color: #0073e6;
+    background-color: #0973b9;
     color: white;
     text-align: center;
-    padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    margin-top: auto;
 }
