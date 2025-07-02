@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.logo img {
+    vertical-align: middle;
+    width: 250px;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-section span {
+    margin-right: 10px;
+    color: #0973b9;
+}
+
+.user-section button {
+    background-color: #0973b9;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.line {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0973b9;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+main h2 {
+    color: #0973b9;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-form {
+    background-color: #f8f9fa;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-form label {
+    display: block;
+    text-align: left;
+    color: #0973b9;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.apply-btn, .delete-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.apply-btn {
+    background-color: #e68d1d;
+}
+
+.apply-btn:hover {
+    background-color: #c57717;
+}
+
+.delete-btn {
+    background-color: #e68d1d;
+}
+
+.delete-btn:hover {
+    background-color: #c57717;
+}
+
+footer {
+    background-color: #0973b9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
