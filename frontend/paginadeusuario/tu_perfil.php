@@ -16,7 +16,7 @@ session_start();
             <img src="../img/alerta_vital.webp" alt="Alertavital Logo">
         </div>
         <div class="user-section">
-            <span>UsuarloX</span>
+            <span>Usuario</span>
             <button>Cerrar Sesión</button>
         </div>
     </header>
@@ -32,7 +32,7 @@ session_start();
     <main>
         <section class="profile-card">
             <h2>Tu perfil</h2>
-            <div class="profile-pic"></div>
+            <div class="profile-pic"><img src="../img/usuario.webp" alt="usuario" ></div>
             <form method="post" action="">
                 <label>Nombre de Usuario</label>
                 <input type="text" name="username" value="XXXX" readonly>

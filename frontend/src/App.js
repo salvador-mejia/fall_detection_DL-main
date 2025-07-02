@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import StreamView from './StreamView';
-import AlertList from './AlertList'; // <-- import the alert list component
+import AlertDashboard from './AlertDashboard'; // ✅ now using the styled version
 
 function App() {
   const [view, setView] = useState('streams');
@@ -18,7 +18,7 @@ function App() {
       </div>
 
       {view === 'streams' && <StreamView />}
-      {view === 'alerts' && <AlertList />} {/* Now it shows the alerts */}
+      {view === 'alerts' && <AlertDashboard />} {/* ✅ shows full styled dashboard */}
     </div>
   );
 }

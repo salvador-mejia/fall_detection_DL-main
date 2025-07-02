@@ -54,6 +54,15 @@ nav a {
     margin-left: 10px;
 }
 
+.user-section button{
+    border-radius: 5px;
+}
+
+.user-section span{
+    color: #0973b9;
+    margin-right: 10px;
+}
+
 .profile-card {
     background-color: #0973b9;
     color: white;
@@ -67,9 +76,22 @@ nav a {
 .profile-pic {
     width: 80px;
     height: 80px;
-    background-color: #e68d1d;
     border-radius: 50%;
     margin: 0 auto 20px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .profile-card input {

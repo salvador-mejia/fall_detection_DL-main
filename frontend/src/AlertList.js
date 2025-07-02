@@ -7,7 +7,17 @@ const AlertList = () => {
     fetch('http://localhost:5000/api/alerts')
       .then(res => res.json())
       .then(data => {
-        setAlerts(data);
+        console.log("Raw response from /api/alerts:", data);
+
+        // Try both cases: direct array or wrapped object
+        if (Array.isArray(data)) {
+          setAlerts(data);
+        } else if (Array.isArray(data.alerts)) {
+          setAlerts(data.alerts);
+        } else {
+          console.error("Unexpected data format:", data);
+          setAlerts([]); // fallback to avoid .map error
+        }
       })
       .catch(err => {
         console.error('Failed to fetch alerts:', err);
@@ -20,7 +30,7 @@ const AlertList = () => {
       <ul>
         {alerts.map(alert => (
           <li key={alert.id}>
-            {alert.timestamp} - {alert.message}
+            {alert.timestamp} - {alert.evento}
           </li>
         ))}
       </ul>

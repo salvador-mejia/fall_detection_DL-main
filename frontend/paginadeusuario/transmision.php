@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alertavital</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/transmision.css">
 </head>
 <body>
     <header>
@@ -30,15 +30,12 @@ session_start();
         <a href="#faqs">FAQs</a>
     </nav>
     <main>
-        <div class="gallery">
-            <div class="image-container"><img src="image1.jpg" alt="Room 1"></div>
-            <div class="image-container"><img src="image2.jpg" alt="Room 2"></div>
-            <div class="image-container"><img src="image3.jpg" alt="Room 3"></div>
-            <div class="image-container"><img src="image4.jpg" alt="Room 4"></div>
-            <div class="image-container"><img src="image5.jpg" alt="Room 5"></div>
-            <div class="image-container"><img src="image6.jpg" alt="Room 6"></div>
+        <div class="video-container">
+             <video width="640" height="360" controls>
+                  <source src="../../backend/stream_backend/videos/fall1.mp4" type="video/mp4">
+                  Tu navegador no soporta la reproducción de video.
+            </video>
         </div>
-        <button class="add-button">Añadir</button>
     </main>
     <footer>
         <p>© ALERTAVITAL 2025</p>
