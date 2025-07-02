@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <!-- Encabezado -->
     <header>
         <div style="display: flex; align-items: center;">
-            <img src="../../ASSETS/img/logo.svg" alt="Logo" width="150">
+            <img src="../img/alerta_vital.webp" alt="Logo" width="250" >
         </div>
         <nav>
             <a href="#">Información sobre el Sistema</a>
@@ -68,13 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <main>
         <div style="display: flex; gap: 40px; align-items: center; justify-content: center; padding: 40px;">
             <div>
-                <img src="../../ASSETS/img/ancianos.png" alt="Imagen ilustrativa" style="border-radius: 10px; max-width: 400px;">
+                <img src="../img/img1.png" alt="Imagen ilustrativa" style="border-radius: 10px; max-width: 678px;">
             </div>
 
             <div class="tab-container">
                 <div class="button-group">
                     <button class="tab-button">Login</button>
-                    <button class="tab-button">Registro</button>
+                    <a href="registro.php" class="tab-button">Registro</a>
                 </div>
                 <h2 class="subtitulo">Accede a tu cuenta</h2>
 
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <!-- Pie de página -->
     <footer>
-        <p>© FALL DETECTION 2025</p>
+        <p>© ALERTAVITAL 2025</p>
     </footer>
 </body>
 </html>
