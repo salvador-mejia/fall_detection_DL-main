@@ -13,7 +13,7 @@ session_start();
 <body>
     <header>
         <div class="logo">
-            <img src="../ASSETS/img/alerta_vital.webp" alt="Alertavital Logo">
+            <img src="../img/alerta_vital.webp" alt="Alertavital Logo">
         </div>
         <div class="user-section">
             <span>UsuarloX</span>
